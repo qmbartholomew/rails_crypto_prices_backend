@@ -1,24 +1,41 @@
-# README
+# Capstone Project - Currensee Crypto Price Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### By [Quentin Bartholomew](https://bartholomewwebsolutions.netlify.app/) & [Max Said](https://max-said.netlify.app/)
 
-Things you may want to cover:
+## Project Summary
 
-* Ruby version
+Currensee is a database for users to create an account add crypto currencies to their wishlist to keep track of pricing. 
 
-* System dependencies
+## Models
 
-* Configuration
+User:
+- Username
+- Password
 
-* Database creation
+Coin:
+- Token
 
-* Database initialization
+## Route Table
 
-* How to run the test suite
+| URL | Method | Action |
+|-----|--------|--------|
+| /login | Post | Log in user|
+| /auto_login | Get | Logs in a user automatically if JWT token is present|
+| /coins | Post | Add a new token/currency for a specific user (create)|
+| /coins/:id | Put | Update a token/currency for a specific user (update)|
+| /coins/:id | Delete | Delete a token/currency for a specific user (delete)|
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## User Stories
 
-* ...
+- A user should be able to login to their account
+- If a user has an active JWT token, they should be automatically logged in without having to provide their credentials again
+- A user should be able to add a token to their list
+- A user should be able to edit a token within their own list
+- A user should be able to delete a token on their own list
+
+## List of Technologies
+
+- Ruby
+
+- HTML
